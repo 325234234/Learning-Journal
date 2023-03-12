@@ -1,0 +1,158 @@
+/* General setup */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+ }
+
+/* Layout */
+
+/* Navigation bar */
+
+nav {    
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1em 2em;
+}
+
+#nav-title {
+    font-size: 1.25rem;
+}
+
+#title {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#nav-home {
+    margin: 0 1em 0 auto;
+}
+
+#nav-home,
+#nav-about {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Hero section */
+
+header {
+    background: url("/images/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 300px;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+
+    color: whitesmoke;
+}
+
+#hero-date {
+    margin-top: auto;
+    font-size: 0.75rem;
+}
+
+#hero-heading {
+    font-size: 2.5rem;
+}
+
+#hero-body {
+    max-width: 600px;
+}
+
+/* Main section */
+
+#section-posts {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em;
+}
+
+.card {
+    display: grid;
+    grid-template: 225px 20px auto auto / 1fr;
+
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #50505062;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: #000000;
+    padding-top: 0.5em;
+}
+
+.card-heading {
+    font-size: 2rem;
+    color: #141414;
+}
+
+.card-body {
+    color: #505050;
+}
+
+#btn-viewmore {    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration-line: underline;
+    color: #000000;
+
+    background: none;
+    border: none;    
+    cursor: pointer;
+    
+    display: block;
+    margin: 0 auto 1em auto;
+}
+
+/* Footer */
+
+footer {
+    background: #202020;
+    text-align: center;    
+    padding: 1.25em 0;
+}
+
+#footer-title {   
+    font-size: 0.75rem; 
+    color: #ececec71;
+}
+
+#footer-copyright {
+    font-size: 0.75rem;
+    color: #505050;
+}
+
+ /* Responsiveness */
+ @media (min-width: 768px) {
+
+    #section-posts {
+        width: 100vw;
+        
+        display: grid;
+        grid-template: repeat(auto-fit, minmax(225px, 1fr)) / repeat(auto-fit, minmax(350px, 1fr));
+    }
+ }

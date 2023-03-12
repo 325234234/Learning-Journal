@@ -1,0 +1,174 @@
+/* General setup */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #151515;
+ }
+
+/* Layout */
+
+/* Navigation bar */
+
+nav {    
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1em 2em;
+}
+
+#nav-title {
+    font-size: 1.25rem;
+}
+
+#title {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#nav-home {
+    margin: 0 1em 0 auto;
+}
+
+#nav-home,
+#nav-about {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Hero section */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    padding: 1em 2em;
+}
+
+#profilePicture {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+#introduction {
+    padding-bottom: 1.5em;    
+    border-bottom: 1px solid #50505062;
+}
+
+#introduction > h1 {
+    font-size: 2.125rem;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+}
+
+#introduction > p {
+    font-size: 1.25rem;
+}
+
+/* Main section */
+
+main {
+    padding: 0.75em 2em 0 2em; 
+}
+
+main > article {
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #50505062;   
+}
+
+aside > h3 {
+    font-size: 2rem;
+    text-align: center;
+
+    padding: 0.7em 0 0.25em 0;
+}
+
+.card {
+    display: grid;
+    grid-template: 225px 20px auto auto / 1fr;
+
+    padding-bottom: 1.5em;  
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: #000000;
+    padding-top: 0.5em;
+}
+
+.card-heading {
+    font-size: 2rem;
+    color: #141414;
+}
+
+.card-body {
+    color: #505050;
+}
+
+/* Footer */
+
+footer {
+    background: #202020;
+    text-align: center;    
+    padding: 1.25em 0;
+}
+
+#footer-title {   
+    font-size: 0.75rem; 
+    color: #ececec71;
+}
+
+#footer-copyright {
+    font-size: 0.75rem;
+    color: #505050;
+}
+
+ /* Responsiveness */
+ @media (min-width: 768px) {
+    #hero {
+        flex-direction: row;
+        max-width: 1200px;
+    }
+
+    article {
+        max-width: 1000px;
+    }
+
+    #hero,
+    article,
+    aside {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    aside {
+        max-width: 1100px;
+        
+        display: grid;
+        grid-template: 0.2fr 0.8fr / 1fr 1fr 1fr;
+        column-gap: 1em;
+    }
+
+    aside > h3 {
+        grid-row: 1;
+        grid-column: 1 / -1;
+    }
+
+ }
