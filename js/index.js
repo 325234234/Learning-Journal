@@ -1,5 +1,8 @@
 const header = document.querySelector("header")
 const sectionPosts = document.getElementById("section-posts")
+const titleLogo = document.getElementById("nav-title")
+const burger = document.getElementById("nav-burger")
+const burgerMenu = document.getElementById("burger-menu")
 
 // EventListeners and user input
 document.addEventListener("click", handleClick)
@@ -9,12 +12,15 @@ function handleClick(e) {
         viewMore()
     } else if(header.contains(e.target)) {
         window.location.href = "html/post.html"
+    } else if(titleLogo.contains(e.target)) {
+        window.location.href = "index.html"
+    } else if(burger.contains(e.target)) {
+        toggleMenu()
     }
 }
 
 // Functions
 
-// Landing page
 function renderPosts(postNumber) {
     let html = ``
 
@@ -43,6 +49,10 @@ function renderPosts(postNumber) {
 function viewMore() {
     renderPosts(3)   
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+}
+
+function toggleMenu() {
+    burgerMenu.classList.toggle("hidden")
 }
 
 // Build page on load with six posts
