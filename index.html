@@ -23,12 +23,20 @@
     <body>
         <nav>
             <div id="nav-title">
-                <i class="fa-solid fa-user-graduate"></i>
+                <img src="/images/undraw_code.svg" id="logo">
                 <p id="title">My Learning Journal</p>
-            </div>
-            <a href="index.html" id="nav-home">Home</a>
-            <a href="html/about.html" id="nav-about">About me</a>
+            </div>         
+            <a href="index.html" class="nav-home hidden">Home</a>
+            <a href="html/about.html" class="nav-about hidden">About me</a>
+            <i class="fa-solid fa-bars" id="nav-burger"></i> 
         </nav>
+
+        <section id="burger-menu" class="hidden">
+            <div id="menu-container">
+                <a href="index.html" class="nav-home">Home</a>
+                <a href="html/about.html" class="nav-about">About me</a>
+            </div>            
+        </section>
 
         <header>
             <p id="hero-date">Month day, year</p>

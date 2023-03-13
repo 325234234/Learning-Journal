@@ -18,30 +18,53 @@ body {
 nav {    
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    padding: 1em 2em;
+    align-items: center;
+    padding: 1em 1.5em 1em 1em;
 }
 
 #nav-title {
     font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
 }
 
 #title {
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    cursor: default;
 }
 
-#nav-home {
-    margin: 0 1em 0 auto;
+#logo {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
 }
 
-#nav-home,
-#nav-about {
+#nav-burger {
+    font-size: 1.5rem;
+    cursor: pointer;
+}    
+
+#menu-container {
+    display: flex;
+    width: fit-content;
+    margin: 0 1.5em 1em auto;
+}
+
+.nav-home,
+.nav-about {
+    display: inherit;
     color: black;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.nav-home {
+    margin: 0 1em 0 auto;
 }
 
 /* Hero section */
@@ -99,6 +122,12 @@ aside > h3 {
     grid-template: 225px 20px auto auto / 1fr;
 
     padding-bottom: 1.5em;  
+
+    cursor: pointer;
+}
+
+.card:hover > img {
+    filter:invert(100%);
 }
 
 img {
@@ -140,6 +169,12 @@ footer {
     color: #505050;
 }
 
+/* Utility */
+
+.hidden {
+    display: none;
+}
+
  /* Responsiveness */
  @media (min-width: 768px) {
     #hero {
@@ -171,4 +206,15 @@ footer {
         grid-column: 1 / -1;
     }
 
+    /* Hide the burger icon as well as the menu */
+    #nav-burger,
+    #burger-menu {
+        display: none;
+    }
+
+    /* Unhide the Home and About links in the nav bar */
+    .nav-home,
+    .nav-about {
+        display: inherit;
+    }
  }
