@@ -55,5 +55,5 @@ function toggleMenu() {
     burgerMenu.classList.toggle("hidden")
 }
 
-// Build page on load with six posts
-renderPosts(6)
+// Build page on load with nine posts
+renderPosts(9)
