@@ -8,9 +8,15 @@
 /* Typography */
 body {
     font-family: 'Source Sans Pro', sans-serif;
- }
+}
 
 /* Layout */
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /* Navigation bar */
 
@@ -74,7 +80,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     
-    height: 300px;
+    min-height: 300px;
     padding: 1em;
 
     display: flex;
@@ -86,7 +92,7 @@ header {
 
 #hero-date {
     margin-top: auto;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
 }
 
 #hero-heading {
@@ -95,9 +101,15 @@ header {
 
 #hero-body {
     max-width: 600px;
+    font-size: 1.2rem;
 }
 
 /* Main section */
+
+/* Have the main section take up the remaining space */
+main {
+    flex-grow: 1;
+}
 
 #section-posts {
     width: 100vw;
